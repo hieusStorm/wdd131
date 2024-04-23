@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-columns: 2fr 1fr;
+}
+
+header, footer {
+    grid-column: 1 / 3;
+    background-color: slategray;
+    color: #fff;
+}
+
+nav {
+    margin-top: 5rem;
+    padding: 1rem;
+    display: flex;
+    background-color: darkslategray;
+}
+
+nav a {
+    flex-grow: 1;
+    margin: 1rem;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+}
+
+main {
+    background-color: gray;
+    color: #fff;
+}
+
+footer {
+    text-align: center;
+}
