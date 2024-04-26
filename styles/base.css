@@ -70,3 +70,7 @@ main {
     margin: 0;
     padding: 1rem;
 }
+
+.card ul {
+    list-style: none;
+}
