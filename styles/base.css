@@ -61,6 +61,8 @@ main {
 
 .card img {
     width: 23.3%;
+    height: auto;
+    margin: 1rem;
 }
 
 .card h2 {
@@ -79,4 +81,13 @@ main {
 .card h3 {
    border-bottom: 1px solid #808080;
     width: 100%;
+}
+
+#profile {
+    float: right;
+    width: 15%;
+}
+
+#stateFlag {
+    float: left;
 }
