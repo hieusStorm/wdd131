@@ -22,7 +22,7 @@ nav a {
     padding: 1rem;
     text-decoration: none;
     color: #fff;
-    transition: 0.5s;
+    transition: 1s;
 }
 
 nav a:hover {
@@ -50,11 +50,13 @@ main {
     font-size: 2rem;
     position: absolute;
     top: 0;
-    right: 0;
+    right: 1rem;
+    transition: 1s;
 }
 
 #menu:hover {
     cursor: pointer;
+    text-shadow: 2px 2px #000;
 }
 
 #menu::before {
