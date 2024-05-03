@@ -6,6 +6,9 @@
         <title>Temple Photo Album</title>
         <meta name="desrciption" content="A page with photos of the different temples of the world">
         <meta name="author" content="Hyrum Wines">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles/temples.css">
         <link rel="stylesheet" href="styles/temples-large.css">
         <script src="scripts/temples.js" defer></script>
@@ -13,18 +16,18 @@
     <body>
         <header>
             <h1>Temple Photo Album</h1>
+            <button id="menu"></button>
             <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Old</a></li>
-                    <li><a href="#">New</a></li>
-                    <li><a href="#">Large</a></li>
-                    <li><a href="#">Small</a></li>
-                </ul>
+                <a href="#">Home</a>
+                <a href="#">Old</a>
+                <a href="#">New</a>
+                <a href="#">Large</a>
+                <a href="#">Small</a>
             </nav>
         </header>
         <main>
             <h2>Home</h2>
+            <div class="imageContainer">
             <figure>
                 <img src="images/phoenix_temple_lds.jpeg" alt="Phoenix Temple">
                 <figcaption>Phoenix Arizona Temple</figcaption>
@@ -61,6 +64,7 @@
                 <img src="images/phoenix_temple_lds.jpeg" alt="Phoenix Temple">
                 <figcaption>Phoenix Arizona Temple</figcaption>
             </figure>
+            </div>
         </main>
         <footer>
             <p>&copy; <span id="currentyear"></span> | Hyrum Wines | Arizona</p>
