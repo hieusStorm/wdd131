@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Arizona</title>
+        <meta name="description" content="Infromation on Arizona">
+        <meta name="author" content="Hyrum Wines">
+        <link rel="stylesheet" href="styles/place.css">
+        <link rel="stylesheet" href="styles/place-large.css">
+        <script src="scripts/place.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <h1>Arizona</h1>
+        </header>
+        <main>
+            <div class="hero">
+                <picture>
+                    <source srcset="images/cactus-large.webp" media="(min-width: 1000px)">
+                    <source srcset="images/cactus-medium.webp" media="(min-width: 448px)">
+                    <img src="images/cactus-small.webp" alt="Image of a cactus" width="1248" height="auto">
+                </picture>
+            </div>
+            <div class="data" id="data">
+                <h2>Data</h2>
+                <p><strong>Area:</strong></p> 
+                <p>113,998 mi²</p>
+                <p><strong>Population:</strong></p>
+                <p>7.359 million (2022)</p>
+                <p><strong>Capital:</strong></p>
+                <p>Phoenix</p>
+                <p><strong>Time Zone:</strong></p>
+                <p>MST</p>
+                <p><strong>Calling Code:</strong></p>
+                <p>+1</p>
+                <p><strong>Internet TLD:</strong></p>
+                <p>.us</p>
+            </div>
+            <div class="data" id="weather">
+                <h2>Weather </h2>
+                <img src="images/sunny-tempature.svg" alt="weather icon" width="125px" height="auto">
+                <p><strong>Tempature:</strong></p>
+                <p><span id="tempature">106</span>&#176;F</p>
+                <p><strong>Conditions:</strong></p>
+                <p>Sunny</p>
+                <p><strong>Wind:</strong></p>
+                <p><span id="wind">4.9</span>mph</p>
+                <p><strong>Wind Chill:</strong></p>
+                <p id="windChill"></p>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; <span id="currentyear"></span> | Hyrum Wines | Arizona</p>
+            <p id="lastModified"></p>
+        </footer>
+    </body>
+</html>
