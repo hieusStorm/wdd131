@@ -1,0 +1,30 @@
+table {
+    margin: 1rem auto;
+    text-align: center;
+    border-collapse: collapse;
+}
+caption {
+    caption-side: bottom;
+    font-size: .85rem;
+}
+thead {
+    background-color: #000;
+    color: #FFF;
+}
+
+thead th, thead td {
+    border: none;
+}
+
+th[scope=col] {
+    background-color: #575353;
+}
+
+td, th {
+    border: thin solid #a5a4a4;
+    padding: 1rem;
+}
+
+tbody tr:nth-child(even){
+    background-color: #e4e4e6;
+}
