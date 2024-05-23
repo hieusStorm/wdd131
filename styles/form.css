@@ -1,0 +1,55 @@
+* {
+    margin: 0 auto;
+    font-family: 'Arimo', Arial, Helvetica, sans-serif;
+}
+
+header,
+footer {
+    padding: 1rem;
+    text-align: center;
+    color: #FFF;
+    background-color: #920202;
+}
+
+main {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    max-width: 500px;
+}
+
+form {
+    background-color: #bdb2b2;
+    padding: 3rem;
+}
+
+form label {
+    display: block;
+}
+
+fieldset {
+    border: none;
+}
+
+form input[type="text"],
+form input[type="date"],
+form select,
+form textarea {
+    display: block;
+    width: 100%;
+    padding: .5rem;
+}
+
+form input[type="radio"], form input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+form input[type="submit"] {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border: none;
+    background-color: #da1010;
+    color: #FFF;
+    border-radius: 1rem;
+    font-size: 1rem;
+}

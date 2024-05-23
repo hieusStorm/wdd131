@@ -6,6 +6,11 @@
         <title>Product Review</title>
         <meta name="description" content="A form to post a review of a given product">
         <meta name="author" content="Hyrum Wines">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+            rel="stylesheet">
         <link rel="stylesheet" href="styles/form.css">
         <link rel="stylesheet" href="styles/form-large.css">
         <script src="scripts/form.js" defer></script>
@@ -19,30 +24,28 @@
                 <label>
                     Product Name*
                     <select id="productName" name="product" required>
-                        <option disabled>Select a Product...</option>
+                        <option value="" selected disabled>Select a Product...</option>
                     </select>
                 </label>
                 <fieldset>
-                    <legend>Overall Rating*</legend>
-                    <label><input id="oneStar" name="rating" value="☆" required>☆</label>
-                    <label><input id="twoStar" name="rating" value="☆☆" required>☆☆</label>
-                    <label><input id="threeStar" name="rating" value="☆☆☆" required>☆☆☆</label>
-                    <label><input id="fourStar" name="rating" value="☆☆☆☆" required>☆☆☆☆</label>
-                    <label><input id="fiveStar" name="rating" value="☆☆☆☆☆" required>☆☆☆☆☆</label>
+                    <div>Overall Rating*</div>
+                    <label><input type="radio" id="oneStar" name="rating" value="☆" required>☆</label>
+                    <label><input type="radio" id="twoStar" name="rating" value="☆☆" required>☆☆</label>
+                    <label><input type="radio" id="threeStar" name="rating" value="☆☆☆" required>☆☆☆</label>
+                    <label><input type="radio" id="fourStar" name="rating" value="☆☆☆☆" required>☆☆☆☆</label>
+                    <label><input type="radio" id="fiveStar" name="rating" value="☆☆☆☆☆" required>☆☆☆☆☆</label>
                 </fieldset>
                 <label>
                     Date of Installation*
                     <input type="date" name="installDate" id="installDate" required>
                 </label>
                 <fieldset>
-                    <legend>Which of the features did you find to be useful?*</legend>
-                    <label><input type="checkbox" name="feature" id="durability" value="durability"
-                            required>Durability</label>
-                    <label><input type="checkbox" name="feature" id="easeOfUse" value="ease of use" required>Ease of
-                        use</label>
-                    <label><input type="checkbox" name="feature" id="performance" value="performance"
-                            required>Performance</label>
-                    <label><input type="checkbox" name="feature" id="design" value="design" required>Design</label>
+                    <div>Which of the features did you find to be useful?</div>
+                    <label><input type="checkbox" name="feature" id="durability" value="durability">Durability</label>
+                    <label><input type="checkbox" name="feature" id="easeOfUse" value="ease of use">Ease of use</label>
+                    <label><input type="checkbox" name="feature" id="performance"
+                            value="performance">Performance</label>
+                    <label><input type="checkbox" name="feature" id="design" value="design">Design</label>
                 </fieldset>
                 <label>
                     Written Review
