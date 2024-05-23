@@ -11,6 +11,50 @@
         <script src="scripts/form.js" defer></script>
     </head>
     <body>
+        <header>
+            <h1>Product Review</h1>
+        </header>
+        <main>
+            <form action="review.html" method="get">
+                <label>
+                    Product Name*
+                    <select id="productName" name="product" required>
+                        <option disabled>Select a Product...</option>
+                    </select>
+                </label>
+                <fieldset>
+                    <legend>Overall Rating*</legend>
+                    <label><input id="oneStar" name="rating" value="☆" required>☆</label>
+                    <label><input id="twoStar" name="rating" value="☆☆" required>☆☆</label>
+                    <label><input id="threeStar" name="rating" value="☆☆☆" required>☆☆☆</label>
+                    <label><input id="fourStar" name="rating" value="☆☆☆☆" required>☆☆☆☆</label>
+                    <label><input id="fiveStar" name="rating" value="☆☆☆☆☆" required>☆☆☆☆☆</label>
+                </fieldset>
+                <label>
+                    Date of Installation*
+                    <input type="date" name="installDate" id="installDate" required>
+                </label>
+                <fieldset>
+                    <legend>Which of the features did you find to be useful?*</legend>
+                    <label><input type="checkbox" name="feature" id="durability" value="durability"
+                            required>Durability</label>
+                    <label><input type="checkbox" name="feature" id="easeOfUse" value="ease of use" required>Ease of
+                        use</label>
+                    <label><input type="checkbox" name="feature" id="performance" value="performance"
+                            required>Performance</label>
+                    <label><input type="checkbox" name="feature" id="design" value="design" required>Design</label>
+                </fieldset>
+                <label>
+                    Written Review
+                    <textarea id="writenReview" name="writenReview"></textarea>
+                </label>
+                <label>
+                    Your Name:
+                    <input type="text" id="userName" name="userName" placeholder="Your Name">
+                </label>
+                <input type="submit" value="Post Review">
+            </form>
+        </main>
         <footer>
             <p>&copy; <span id="currentyear"></span> | Hyrum Wines | Arizona</p>
             <p id="lastModified"></p>
