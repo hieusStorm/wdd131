@@ -9,16 +9,18 @@ main {
 
 header {
     padding: 1rem;
-    border: 1px solid #cccccc;
+    border-bottom: 1px solid #c4c119;
     margin-bottom: 1rem;
 }
 
 footer {
     margin-top: 1rem;
-    border-top: 1px solid #cccccc;
+    border-top: 1px solid #c4c119;
     text-align: center;
 }
-
+header, footer {
+    background-color: #ebece0;
+}
 h1,
 h2,
 h3,
@@ -47,8 +49,8 @@ button {
 }
 
 section {
-    border-bottom: 1px solid #cccccc;
-    margin-bottom: 1rem;
+    border-bottom: 1px solid #c4c119;
+    margin-bottom: 2rem;
 }
 
 a {
