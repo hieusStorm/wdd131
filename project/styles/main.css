@@ -1,6 +1,24 @@
 * {
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    margin: 0 auto;
 }
+
+main {
+    max-width: 500px;
+}
+
+header {
+    padding: 1rem;
+    border: 1px solid #cccccc;
+    margin-bottom: 1rem;
+}
+
+footer {
+    margin-top: 1rem;
+    border-top: 1px solid #cccccc;
+    text-align: center;
+}
+
 h1,
 h2,
 h3,
@@ -8,4 +26,31 @@ h4,
 h5,
 h6 {
     font-family: 'Domine', serif, Arial;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+    color: #b30000;
+}
+
+button {
+    background-color: #b30000;
+    border: none;
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
+
+section {
+    border-bottom: 1px solid #cccccc;
+    margin-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
 }
