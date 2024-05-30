@@ -103,4 +103,90 @@ function BuildLinks() {
     });
 }
 
-function BuildsDisplay() { }
+function BuildsDisplay() { 
+    const main = document.querySelector(`main`);
+    warframeBuilds.forEach(build => {
+        const contentSection = document.createElement(`section`);
+        const name = document.createElement(`h3`);
+        const buildImage = document.createElement(`picture`);
+        const warframeMods = document.createElement(`div`);
+        const warframeArcanes = document.createElement(`p`);
+        const primaryWeapon = document.createElement(`h4`);
+        const primaryMods = document.createElement(`div`);
+        const primaryArcane = document.createElement(`p`);
+        const secondaryWeapon = document.createElement(`h4`);
+        const secondaryMods = document.createElement(`div`);
+        const secondaryArcane = document.createElement(`p`);
+        const meleeWeapon = document.createElement(`h4`);
+        const meleeMods = document.createElement(`div`);
+        const meleeArcane = document.createElement(`p`);
+        const use = document.createElement(`p`);
+        
+        name.textContent = build.name;
+        contentSection.appendChild(name);
+        //build image info
+        const largeImg = document.createElement(`source`);
+        const smallImg = document.createElement(`img`);
+        largeImg.setAttribute(`srcset`, `images/${build.name}-large.webp`);
+        largeImg.setAttribute(`media`, `(min-width: 1000px)`);
+        smallImg.src = `images/${build.name}-small.webp`;
+        smallImg.setAttribute(`alt`, `Image of ${build.name}`);
+        buildImage.appendChild(largeImg);
+        buildImage.appendChild(smallImg);
+        contentSection.appendChild(buildImage);
+        
+        use.textContent = build.use;
+        contentSection.appendChild(use);
+        
+        warframeMods.classList.add(`mod`);
+        modDiv(warframeMods, build.warframeMods);
+        contentSection.appendChild(warframeMods);
+
+        warframeArcanes.textContent = `Arcanes:`;
+        build.warframeArcanes.forEach(arcane => {
+            warframeArcanes.textContent = `${warframeArcanes.textContent} ${arcane}`;
+        });
+        contentSection.appendChild(warframeArcanes);
+
+        primaryWeapon.textContent = build.primaryWeapon;
+        contentSection.appendChild(primaryWeapon);
+
+        primaryMods.classList.add(`mod`);
+        modDiv(primaryMods, build.primaryMods);
+        contentSection.appendChild(primaryMods);
+
+        primaryArcane.textContent = build.primaryArcane;
+        contentSection.appendChild(primaryArcane);
+
+        secondaryWeapon.textContent = build.secondaryWeapon;
+        contentSection.appendChild(secondaryWeapon);
+
+        secondaryMods.classList.add(`mod`);
+        modDiv(secondaryMods, build.secondaryMods);
+        contentSection.appendChild(secondaryMods);
+
+        secondaryArcane.textContent = build.secondaryArcane;
+        contentSection.appendChild(secondaryArcane);
+
+        meleeWeapon.textContent = build.meleeWeapon;
+        contentSection.appendChild(meleeWeapon);
+
+        meleeMods.classList.add(`mod`);
+        modDiv(meleeMods, build.meleeMods);
+        contentSection.appendChild(meleeMods);
+
+        meleeArcane.textContent = build.meleeArcane;
+        contentSection.appendChild(meleeArcane);
+
+        
+        main.appendChild(contentSection);
+    });
+}
+
+function modDiv(div, mods) {
+    mods.forEach(mod => {
+        const modPargraph = document.createElement(`p`);
+        modPargraph.textContent = mod;
+        div.appendChild(modPargraph);
+    });
+}
