@@ -64,8 +64,19 @@ section {
     margin-bottom: 2rem;
 }
 
-p {
+.mod {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.mod p {
+    border: 1px solid #c4c119;
+    border-radius: 1rem;
+    margin: 1rem;
     text-align: center;
+}
+
+p {
     padding: 1rem;
 }
 
