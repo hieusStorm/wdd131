@@ -25,7 +25,75 @@
                 <a href="about.html">About</a>
             </nav>
         </header>
-        <main></main>
+        <main>
+            <section>
+                <h2>Welcome</h2>
+                <p>Here you can view different builds for warframes that have been submitted!</p>
+            </section>
+            <section id="buildLinks">
+                <h2>Warframe Builds</h2>
+            </section>
+            <section>
+                <h2>Add Your Own Build</h2>
+                <form action="buildSubmit.html" method="get">
+                    <fieldset>
+                        <legend>Your Info</legend>
+                        <label>first name:
+                            <input type="text" placeholder="first name" name="firstName" id="firstName" required>
+                        </label>
+                        <label>email:
+                            <input type="email" placeholder="example@gmail.com" name="email" id="email">
+                        </label>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Build Basic Information</legend>
+                        <label>Warframe:
+                            <input type="text" placeholder="Warframe" name="warframe" id="warframe" required>
+                        </label>
+                        <label>Primary Weapon:
+                            <input type="text" placeholder="Primary" name="primaryWeapon" id="primaryWeapon">
+                        </label>
+                        <label>Secondary Weapon:
+                            <input type="text" placeholder="Secondary" name="secondaryWeapon" id="secondaryWeapon">
+                        </label>
+                        <label>Melee Weapon:
+                            <input type="text" placeholder="Melee" name="meleeWeapon" id="meleeWeapon">
+                        </label>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Build Advanced Information</legend>
+                        <label>Warframe Mods (place a comma inbetween mods):
+                            <textarea name="warframeMods" id="warframeMods"></textarea>
+                        </label>
+                        <label>Warframe Arcanes (place a comma inbetween mods):
+                            <textarea name="warframeArcanes" id="warframeArcanes"></textarea>
+                        </label>
+                        <label>Primary Weapon Mods (place a comma inbetween mods):
+                            <textarea name="primaryWeaponMods" id="primaryWeaponMods"></textarea>
+                        </label>
+                        <label>Primary Weapon Arcane:
+                            <input type="text" placeholder="Primary Arcane" name="primaryArcane" id="primaryArcane">
+                        </label>
+                        <label>Secondary Weapon Mods (place a comma inbetween mods):
+                            <textarea name="secondaryWeaponMods" id="secondaryWeaponMods"></textarea>
+                        </label>
+                        <label>Secondary Weapon Arcane:
+                            <input type="text" placeholder="Secondary Arcane" name="secondaryArcane" id="secondaryArcane">
+                        </label>
+                        <label>Melee Weapon Mods (place a comma inbetween mods):
+                            <textarea name="meleeWeaponMods" id="meleeWeaponMods"></textarea>
+                        </label>
+                        <label>Primary Weapon Arcane:
+                            <input type="text" placeholder="Melee Arcane" name="meleeArcane" id="meleeArcane">
+                        </label>
+                        <label>How to use:
+                            <textarea name="use" id="use"></textarea>
+                        </label>
+                    </fieldset>
+                    <input type="submit" value="Add Build">
+                </form>
+            </section>
+        </main>
         <footer>
             <p>&copy; <span id="currentyear"></span> | Hyrum Wines | Arizona</p>
             <p id="lastModified"></p>
