@@ -8,9 +8,9 @@ main {
 }
 
 header {
-    padding: 1rem;
     border-bottom: 1px solid #c4c119;
     margin-bottom: 1rem;
+    padding: 1rem;
 }
 
 footer {
@@ -18,9 +18,12 @@ footer {
     border-top: 1px solid #c4c119;
     text-align: center;
 }
-header, footer {
+
+header,
+footer {
     background-color: #ebece0;
 }
+
 h1,
 h2,
 h3,
@@ -46,6 +49,12 @@ button {
     color: #fff;
     padding: 0.5rem;
     border-radius: 1rem;
+    transition: 0.5s;
+}
+button:hover {
+    cursor: pointer;
+    background-color: #000;
+    text-shadow: 2px 2px 3px #b30000;
 }
 
 section {
@@ -55,7 +64,41 @@ section {
 
 a {
     text-decoration: none;
+    transition: 0.5s;
 }
+
 a:hover {
     color: #000;
+    border-bottom: 1px solid black;
+}
+
+/* nav bar display */
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 1rem;
+}
+
+nav a {
+    display: none;
+}
+
+#current {
+    border-bottom: 2px solid #000;
+}
+
+.open a {
+    display: block;
+    padding: 2rem;
+}
+
+#menu {
+    border-radius: 0%;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    padding: 1rem;
 }
