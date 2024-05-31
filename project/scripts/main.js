@@ -133,6 +133,7 @@ function BuildsDisplay() {
         largeImg.setAttribute(`media`, `(min-width: 1000px)`);
         smallImg.src = `images/${build.name}-small.webp`;
         smallImg.setAttribute(`alt`, `Image of ${build.name}`);
+        smallImg.setAttribute(`loading`, `lazy`);
         buildImage.appendChild(largeImg);
         buildImage.appendChild(smallImg);
         contentSection.appendChild(buildImage);
