@@ -15,4 +15,8 @@
     nav a {
         display: block;
     }
+
+    .mod {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }

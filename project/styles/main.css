@@ -65,14 +65,13 @@ input[type="submit"]:hover {
 }
 
 section {
-    border-bottom: 1px solid #c4c119;
-    margin-bottom: 3rem;
+    border-bottom: 2px solid #c4c119;
     padding: 1rem;
 }
 
 .mod {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
 }
 
 .mod p {
@@ -98,8 +97,13 @@ a:hover {
     border-bottom: 1px solid black;
 }
 
+picture {
+    display: flex;
+    flex-direction: column;
+}
+
 img {
-    background-color: #b30000;
+    background-image: linear-gradient(#c4c119, #b30000);
 }
 
 /* nav bar display */
