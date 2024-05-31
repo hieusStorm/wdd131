@@ -167,10 +167,12 @@ input[type="submit"] {
     width: 100%;
 }
 
-input:required {
+input:required,
+textarea:required {
     border-bottom: 5px solid #b30000;
 }
 
-input:required:valid {
+input:required:valid,
+textarea:required:valid {
     border-bottom: 5px solid #097909;
 }
