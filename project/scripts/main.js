@@ -276,5 +276,4 @@ function addBuild() {
     buildsAdded++;
     localStorage.setItem("buildsAdded", buildsAdded);
     document.getElementById("buildsAdded").textContent = buildsAdded;
-    setTimeout(window.location.replace("index.html"), 10000);
 }
