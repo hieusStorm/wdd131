@@ -98,6 +98,10 @@ a:hover {
     border-bottom: 1px solid black;
 }
 
+img {
+    background-color: #b30000;
+}
+
 /* nav bar display */
 
 nav {
