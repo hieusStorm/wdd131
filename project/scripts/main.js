@@ -83,11 +83,13 @@ warframeBuilds = [
         use: `Spam your second ability and use your third ability from time to time. Follow this up with just using your preferred ability.`
     },
 ];
-
+//determine what to do based on the page you are on
 if (document.title == `Warframe Builds - Home`) {
     BuildLinks();
 } else if (document.title == `Warframe Builds - Builds`) {
     BuildsDisplay();
+} else if (document.title == `Warframe Builds - About`) {
+    ExampleBuild();
 }
 
 //functions
@@ -103,7 +105,7 @@ function BuildLinks() {
     });
 }
 
-function BuildsDisplay() { 
+function BuildsDisplay() {
     const main = document.querySelector(`main`);
     warframeBuilds.forEach(build => {
         const contentSection = document.createElement(`section`);
@@ -121,7 +123,7 @@ function BuildsDisplay() {
         const meleeMods = document.createElement(`div`);
         const meleeArcane = document.createElement(`p`);
         const use = document.createElement(`p`);
-        
+
         name.textContent = build.name;
         contentSection.appendChild(name);
         //build image info
@@ -134,10 +136,10 @@ function BuildsDisplay() {
         buildImage.appendChild(largeImg);
         buildImage.appendChild(smallImg);
         contentSection.appendChild(buildImage);
-        
+
         use.textContent = build.use;
         contentSection.appendChild(use);
-        
+
         warframeMods.classList.add(`mod`);
         modDiv(warframeMods, build.warframeMods);
         contentSection.appendChild(warframeMods);
@@ -178,9 +180,84 @@ function BuildsDisplay() {
         meleeArcane.textContent = build.meleeArcane;
         contentSection.appendChild(meleeArcane);
 
-        
+
         main.appendChild(contentSection);
     });
+}
+
+function ExampleBuild() {
+    let build = warframeBuilds[0];
+    const section = document.getElementById("example");
+    const name = document.createElement(`h3`);
+    const buildImage = document.createElement(`picture`);
+    const warframeMods = document.createElement(`div`);
+    const warframeArcanes = document.createElement(`p`);
+    const primaryWeapon = document.createElement(`h4`);
+    const primaryMods = document.createElement(`div`);
+    const primaryArcane = document.createElement(`p`);
+    const secondaryWeapon = document.createElement(`h4`);
+    const secondaryMods = document.createElement(`div`);
+    const secondaryArcane = document.createElement(`p`);
+    const meleeWeapon = document.createElement(`h4`);
+    const meleeMods = document.createElement(`div`);
+    const meleeArcane = document.createElement(`p`);
+    const use = document.createElement(`p`);
+
+    name.textContent = build.name;
+    section.appendChild(name);
+    //build image info
+    const largeImg = document.createElement(`source`);
+    const smallImg = document.createElement(`img`);
+    largeImg.setAttribute(`srcset`, `images/${build.name}-large.webp`);
+    largeImg.setAttribute(`media`, `(min-width: 1000px)`);
+    smallImg.src = `images/${build.name}-small.webp`;
+    smallImg.setAttribute(`alt`, `Image of ${build.name}`);
+    buildImage.appendChild(largeImg);
+    buildImage.appendChild(smallImg);
+    section.appendChild(buildImage);
+
+    use.textContent = build.use;
+    section.appendChild(use);
+
+    warframeMods.classList.add(`mod`);
+    modDiv(warframeMods, build.warframeMods);
+    section.appendChild(warframeMods);
+
+    warframeArcanes.textContent = `Arcanes:`;
+    build.warframeArcanes.forEach(arcane => {
+        warframeArcanes.textContent = `${warframeArcanes.textContent} ${arcane}`;
+    });
+    section.appendChild(warframeArcanes);
+
+    primaryWeapon.textContent = build.primaryWeapon;
+    section.appendChild(primaryWeapon);
+
+    primaryMods.classList.add(`mod`);
+    modDiv(primaryMods, build.primaryMods);
+    section.appendChild(primaryMods);
+
+    primaryArcane.textContent = build.primaryArcane;
+    section.appendChild(primaryArcane);
+
+    secondaryWeapon.textContent = build.secondaryWeapon;
+    section.appendChild(secondaryWeapon);
+
+    secondaryMods.classList.add(`mod`);
+    modDiv(secondaryMods, build.secondaryMods);
+    section.appendChild(secondaryMods);
+
+    secondaryArcane.textContent = build.secondaryArcane;
+    section.appendChild(secondaryArcane);
+
+    meleeWeapon.textContent = build.meleeWeapon;
+    section.appendChild(meleeWeapon);
+
+    meleeMods.classList.add(`mod`);
+    modDiv(meleeMods, build.meleeMods);
+    section.appendChild(meleeMods);
+
+    meleeArcane.textContent = build.meleeArcane;
+    section.appendChild(meleeArcane);
 }
 
 function modDiv(div, mods) {
