@@ -68,7 +68,7 @@ warframeBuilds = [
         use: `Start the level with the third ability. Then use the second and first ability to destroy many oppents and use your weapons however you want`
     },
     {
-        name: `Jolt`,
+        name: `Volt`,
         primaryWeapon: `Cedo`,
         secondaryWeapon: `Laetum`,
         meleeWeapon: `Innodem`,
