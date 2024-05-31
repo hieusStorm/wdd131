@@ -90,6 +90,8 @@ if (document.title == `Warframe Builds - Home`) {
     BuildsDisplay();
 } else if (document.title == `Warframe Builds - About`) {
     ExampleBuild();
+} else if (document.title == `Warframe Builds - Added Build`) {
+    addBuild();
 }
 
 //functions
@@ -267,4 +269,12 @@ function modDiv(div, mods) {
         modPargraph.textContent = mod;
         div.appendChild(modPargraph);
     });
+}
+
+function addBuild() {
+    let buildsAdded = Number(localStorage.getItem("buildsAdded"));
+    buildsAdded++;
+    localStorage.setItem("buildsAdded", buildsAdded);
+    document.getElementById("buildsAdded").textContent = buildsAdded;
+    setTimeout(window.location.replace("index.html"), 10000);
 }
