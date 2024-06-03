@@ -183,14 +183,14 @@ function BuildsDisplay() {
         meleeArcane.textContent = build.meleeArcane;
         contentSection.appendChild(meleeArcane);
 
-
+        contentSection.setAttribute(`id`, `${build.name}`)
         main.appendChild(contentSection);
     });
 }
 
 function ExampleBuild() {
     let build = warframeBuilds[0];
-    const section = document.getElementById("example");
+    const section = document.getElementById(`example`);
     const name = document.createElement(`h3`);
     const buildImage = document.createElement(`picture`);
     const warframeMods = document.createElement(`div`);
@@ -272,8 +272,8 @@ function modDiv(div, mods) {
 }
 
 function addBuild() {
-    let buildsAdded = Number(localStorage.getItem("buildsAdded"));
+    let buildsAdded = Number(localStorage.getItem(`buildsAdded`));
     buildsAdded++;
-    localStorage.setItem("buildsAdded", buildsAdded);
-    document.getElementById("buildsAdded").textContent = buildsAdded;
+    localStorage.setItem(`buildsAdded`, buildsAdded);
+    document.getElementById(`buildsAdded`).textContent = buildsAdded;
 }
